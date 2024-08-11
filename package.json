@@ -2,10 +2,10 @@
   "name": "learning-chart",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "parcel build src/index.html --public-url ./ && git add dist && git commit -m 'Deploy to GitHub Pages' && git push origin `git rev-parse --abbrev-ref HEAD`"
   },
   "keywords": [],
   "author": "",
